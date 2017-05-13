@@ -112,11 +112,11 @@ def hello():
     count += 1
     parameterList = get_parameter()
     for parameter in parameterList:
-        interval = random.randint(0, 600)
+        interval = random.randint(0, 1200)
         print u'延迟:',interval
         timer = threading.Timer(interval,get_ticket,(parameter[1], parameter[2], parameter[3], parameter[4], parameter[5]))
         timer.start()
-    timer = threading.Timer(600.0, hello)
+    timer = threading.Timer(1200.0, hello)
     timer.start()
     if count > 100:
         # 关闭链接
